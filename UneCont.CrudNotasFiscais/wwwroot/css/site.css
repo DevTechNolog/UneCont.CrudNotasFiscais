@@ -18,5 +18,39 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    font-family: Arial,Helvetica,sans-serif;
+    margin: 20px
 }
+
+.container {
+    max-width: 900px;
+    margin: 0 auto
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px
+}
+
+input, button {
+    padding: 6px;
+    margin-right: 8px
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left
+}
+
+.message {
+    color: green;
+    margin-top: 8px
+}
+

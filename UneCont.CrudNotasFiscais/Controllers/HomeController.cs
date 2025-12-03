@@ -1,6 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using UneCont.CrudNotasFiscais.Models;
+using UneCont.CrudNotasFiscais.Domain.Models;
 
 namespace UneCont.CrudNotasFiscais.Controllers
 {

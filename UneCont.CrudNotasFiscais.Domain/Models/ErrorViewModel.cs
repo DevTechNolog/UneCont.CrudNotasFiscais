@@ -1,4 +1,4 @@
-namespace UneCont.CrudNotasFiscais.Models
+namespace UneCont.CrudNotasFiscais.Domain.Models
 {
     public class ErrorViewModel
     {
