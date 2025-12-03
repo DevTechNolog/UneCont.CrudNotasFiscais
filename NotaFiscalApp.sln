@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35931.197 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UneCont.CrudNotasFiscais", "UneCont.CrudNotasFiscais\UneCont.CrudNotasFiscais.csproj", "{D9F1B029-FF50-43BA-A4AF-4E2F587B7C04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotaFiscalApp", "UneCont.CrudNotasFiscais\NotaFiscalApp.csproj", "{D9F1B029-FF50-43BA-A4AF-4E2F587B7C04}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -13,11 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{4AC23E94-8FB6-4866-983C-7951FF1AB561}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UneCont.CrudNotasFiscais.Domain", "UneCont.CrudNotasFiscais.Domain\UneCont.CrudNotasFiscais.Domain.csproj", "{3A39D3A5-4A44-4ECF-A682-F5A4565D7C7F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "UneCont.CrudNotasFiscais.Domain\Domain.csproj", "{3A39D3A5-4A44-4ECF-A682-F5A4565D7C7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UneCont.CrudNotasFiscais.Infrastructure.Data", "UneCont.CrudNotasFiscais.Infrastructure\UneCont.CrudNotasFiscais.Infrastructure.Data.csproj", "{A181EEC8-0331-421D-AB37-1B66601C3FA1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Data", "UneCont.CrudNotasFiscais.Infrastructure\Infrastructure.Data.csproj", "{A181EEC8-0331-421D-AB37-1B66601C3FA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UneCont.CrudNotasFiscais.Application", "UneCont.CrudNotasFiscais.Application\UneCont.CrudNotasFiscais.Application.csproj", "{D70E1325-8E8D-47EC-8D4D-0F925A861591}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "UneCont.CrudNotasFiscais.Application\Application.csproj", "{D70E1325-8E8D-47EC-8D4D-0F925A861591}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

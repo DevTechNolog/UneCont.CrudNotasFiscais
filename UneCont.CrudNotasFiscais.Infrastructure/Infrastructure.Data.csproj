@@ -7,8 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\UneCont.CrudNotasFiscais.Domain\Domain.csproj" />
   </ItemGroup>
 
 </Project>
