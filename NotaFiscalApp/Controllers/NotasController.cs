@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace UneCont.CrudNotasFiscais.Controllers
+namespace NotaFiscalApp.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

@@ -1,6 +1,6 @@
-﻿using UneCont.CrudNotasFiscais.Domain.Entities;
+﻿using NotaFiscalApp.Domain.Entities;
 
-namespace UneCont.CrudNotasFiscais.Domain.Interfaces
+namespace NotaFiscalApp.Domain.Interfaces
 {
     public interface INotaFiscalRepository
     {

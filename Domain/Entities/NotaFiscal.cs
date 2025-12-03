@@ -1,4 +1,4 @@
-﻿namespace UneCont.CrudNotasFiscais.Domain.Entities
+﻿namespace NotaFiscalApp.Domain.Entities
 {
     public class NotaFiscal
     {

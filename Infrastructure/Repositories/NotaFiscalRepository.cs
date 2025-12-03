@@ -1,7 +1,7 @@
-﻿using UneCont.CrudNotasFiscais.Domain.Entities;
-using UneCont.CrudNotasFiscais.Domain.Interfaces;
+﻿using NotaFiscalApp.Domain.Entities;
+using NotaFiscalApp.Domain.Interfaces;
 
-namespace UneCont.CrudNotasFiscais.Infrastructure.Data.Repositories
+namespace NotaFiscalApp.Infrastructure.Data.Repositories
 {
     public class NotaFiscalRepository : INotaFiscalRepository
     {
