@@ -1,4 +1,15 @@
+using Application.Interfaces;
+using Application.Services;
+using NotaFiscalApp.Domain.Interfaces;
+using NotaFiscalApp.Infrastructure.Data.Repositories;
+using NotaFiscalApp.Mappings;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<INotaFiscalService, NotaFiscalService>();
+builder.Services.AddSingleton<INotaFiscalRepository, NotaFiscalRepository>();
+
+builder.Services.AddAutoMapper(c => c.AddProfile<AutoMapping>());
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

@@ -1,0 +1,26 @@
+﻿@model List<Application.ViewModel.NotaFiscalViewModel>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Número</th>
+            <th>Cliente</th>
+            <th>Valor</th>
+            <th>Data de Emissão</th>
+            <th>Cadastro</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    @foreach (var nota in Model)
+    {
+        <tr>
+            <td>@nota.Numero</td>
+            <td>@nota.Cliente</td>
+            <td>@nota.Valor.ToString("C")</td>
+            <td>@nota.DataEmissao.ToString("dd/MM/yyyy")</td>
+            <td>@nota.DataCadastro.ToString("dd/MM/yyyy HH:mm")</td>
+        </tr>
+    }
+    </tbody>
+</table>  

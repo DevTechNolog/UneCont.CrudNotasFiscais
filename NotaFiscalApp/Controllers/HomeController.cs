@@ -1,23 +1,30 @@
-using System.Diagnostics;
+using Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using NotaFiscalApp.Domain.Models;
+using NotaFiscalApp.Models;
+using System.Diagnostics;
 
 namespace NotaFiscalApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<HomeController> _logger;  
+        private readonly INotaFiscalService _notaFiscalService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(
+            ILogger<HomeController> logger,     
+            INotaFiscalService notaFiscalService)
         {
-            _logger = logger;
+            _logger = logger; 
+            _notaFiscalService = notaFiscalService;
         }
 
-        public IActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            return View();
+            var listNotasFiscais = await _notaFiscalService.ListarAsync(); 
+            
+            return View(listNotasFiscais);
         }
-
+      
         public IActionResult Privacy()
         {
             return View();

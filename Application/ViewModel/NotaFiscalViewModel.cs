@@ -1,8 +1,8 @@
-﻿namespace NotaFiscalApp.Domain.Entities
+﻿namespace Application.ViewModel
 {
-    public class NotaFiscal
+    public class NotaFiscalViewModel
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
+        public Guid Id { get; set; }
         public string? Numero { get; set; }
         public string? Cliente { get; set; }
         public decimal Valor { get; set; }
