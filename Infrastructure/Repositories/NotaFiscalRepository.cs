@@ -1,6 +1,5 @@
 ﻿using NotaFiscalApp.Domain.Entities;
 using NotaFiscalApp.Domain.Interfaces;
-using System;
 
 namespace NotaFiscalApp.Infrastructure.Data.Repositories
 {

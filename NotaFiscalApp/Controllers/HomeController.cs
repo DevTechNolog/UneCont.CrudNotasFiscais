@@ -20,15 +20,18 @@ namespace NotaFiscalApp.Controllers
 
         public async Task<ActionResult> Index()
         {
-            var listNotasFiscais = await _notaFiscalService.ListarAsync(); 
-            
-            return View(listNotasFiscais);
-        }
-      
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+            try
+            {
+                var listNotasFiscais = await _notaFiscalService.ListarAsync();
+
+                return View(listNotasFiscais);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erro ao carregar a lista de notas fiscais.");
+                return View("Error", new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            }               
+        }    
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
