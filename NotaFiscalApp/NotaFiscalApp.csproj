@@ -16,8 +16,4 @@
     <ProjectReference Include="..\Infrastructure\Infrastructure.Data.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\NotaFiscal\" />
-  </ItemGroup>
-
 </Project>

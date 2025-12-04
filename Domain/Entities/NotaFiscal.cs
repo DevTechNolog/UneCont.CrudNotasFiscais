@@ -1,8 +1,9 @@
-﻿namespace NotaFiscalApp.Domain.Entities
+﻿using Domain.Entities;
+
+namespace NotaFiscalApp.Domain.Entities
 {
-    public class NotaFiscal
+    public class NotaFiscal : DomainBase
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
         public string? Numero { get; set; }
         public string? Cliente { get; set; }
         public decimal Valor { get; set; }

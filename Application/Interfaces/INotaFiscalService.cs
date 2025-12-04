@@ -6,7 +6,7 @@ namespace Application.Interfaces
 {
     public interface INotaFiscalService
     {
-        Task CadastrarAsync(NotaFiscalCreateDto dto);
-        Task<List<NotaFiscalViewModel>> ListarAsync();
+        Task CadastrarAsync(NotaFiscalCreateDto dto);   
+        Task<List<NotaFiscalViewModel>> ListarAsync(string? nomeCliente = null, bool ordenarValor = false);
     }
 }

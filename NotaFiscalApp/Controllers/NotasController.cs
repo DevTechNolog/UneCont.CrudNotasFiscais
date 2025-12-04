@@ -1,7 +1,5 @@
 ﻿using Application.DTOs;
 using Application.Interfaces;
-using Application.ViewModel;
-using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
 namespace NotaFiscalApp.Controllers
@@ -39,11 +37,10 @@ namespace NotaFiscalApp.Controllers
         /// Endpoint para listar as notas.
         /// </summary>
         /// <returns></returns>
-        [HttpGet]
-        [Route("ListarNotasFiscais")]
-        public async Task<IActionResult> ListarNotasFiscais()
+        [HttpGet]   
+        public async Task<IActionResult> Get(string? nomeCliente, bool ordenarValor = false)
         {
-            var listNotasFiscais = await _service.ListarAsync();
+            var listNotasFiscais = await _service.ListarAsync(nomeCliente, ordenarValor);
                
             return PartialView("~/Views/Home/_PartialTabelaNotas.cshtml", listNotasFiscais);          
         }

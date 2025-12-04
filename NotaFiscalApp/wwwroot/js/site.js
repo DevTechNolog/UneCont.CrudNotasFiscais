@@ -1,6 +1,6 @@
 ﻿$(function () {
     function carregarNotas() {
-        $.get("api/notas/ListarNotasFiscais")
+        $.get("api/notas")
             .done(function (data) {
                 $("#tabelaNotas").html(data); 
             })
@@ -45,6 +45,27 @@
             });
 
     })
+
+    document.getElementById("filtroCliente").addEventListener("change", () => {
+        const cliente = document.getElementById("filtroCliente").value;
+
+        fetch(`/api/notas?nomeCliente=${cliente}`)
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("tabelaNotas").innerHTML = html;
+            })
+            .catch(error => console.error("Erro:", error));
+    });
+    document.getElementById("ordenarValor").addEventListener("click", () => {        
+        const cliente = document.getElementById("filtroCliente").value;
+
+        fetch(`/api/notas?nomeCliente=${cliente}&ordenarValor=true`)
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById("tabelaNotas").innerHTML = html;
+            })
+            .catch(error => console.error("Erro:", error));
+    });
 
     function showMessage(text, isError) {
         const el = $('#formMessage');

@@ -27,9 +27,18 @@ namespace Application.Services
             await _repository.AddAsync(entity);
         }
 
-        public async Task<List<NotaFiscalViewModel>> ListarAsync()
+        public async Task<List<NotaFiscalViewModel>> ListarAsync(string? nomeCliente, bool ordenarValor = false)
         {
-            var listNotasFiscais = await _repository.GetAllAsync();
+            Func<NotaFiscal, bool> filtro = filtro = f => true;
+
+            if (!string.IsNullOrWhiteSpace(nomeCliente))            
+                filtro = x => x.Cliente == nomeCliente;        
+
+            var listNotasFiscais = await _repository.GetAllAsync(filtro);
+      
+            if (ordenarValor)
+                listNotasFiscais = listNotasFiscais.OrderBy(x => x.Valor).ToList();
+
             return _mapper.Map<List<NotaFiscalViewModel>>(listNotasFiscais);                     
         }
     }

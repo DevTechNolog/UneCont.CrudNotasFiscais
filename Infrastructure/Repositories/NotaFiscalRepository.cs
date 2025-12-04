@@ -1,5 +1,6 @@
 ﻿using NotaFiscalApp.Domain.Entities;
 using NotaFiscalApp.Domain.Interfaces;
+using System;
 
 namespace NotaFiscalApp.Infrastructure.Data.Repositories
 {
@@ -13,9 +14,9 @@ namespace NotaFiscalApp.Infrastructure.Data.Repositories
             return Task.CompletedTask;
         }
 
-        public Task<List<NotaFiscal>> GetAllAsync()
+        public Task<List<NotaFiscal>> GetAllAsync(Func<NotaFiscal, bool>? filtro = null)
         {
-            return Task.FromResult(_notas.AsEnumerable().ToList());
+            return Task.FromResult(_notas.Where(filtro).AsEnumerable().ToList());
         }
     }
 }
