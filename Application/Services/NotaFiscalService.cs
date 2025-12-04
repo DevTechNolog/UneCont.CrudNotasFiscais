@@ -48,10 +48,10 @@ namespace Application.Services
 
             // Valida se o Numero da nota já existe.
             var listaNotaExistente = await ListarAsync(numeroNota: dto.Numero);
-            if (listaNotaExistente.Any())
+            if (listaNotaExistente is not null && listaNotaExistente.Any())
                 throw new Exception($"Já existe uma nota cadastrada com o Numero {dto.Numero}");
            
-            dto.Cliente = dto.Cliente?.ToLower();    
+            dto.Cliente = dto.Cliente?.ToUpper();    
         }
 
         public async Task<List<NotaFiscalViewModel>> ListarAsync(string? nomeCliente = null, string? numeroNota = null, bool? ordenarValor = null)
@@ -59,7 +59,7 @@ namespace Application.Services
             Func<NotaFiscal, bool> filtro = filtro = f => true;
 
             if (!string.IsNullOrWhiteSpace(nomeCliente))
-                filtro = x => !string.IsNullOrWhiteSpace(x.Cliente) && x.Cliente.Contains(nomeCliente.ToLower());
+                filtro = x => !string.IsNullOrWhiteSpace(x.Cliente) && x.Cliente.Contains(nomeCliente.ToUpper());
             if (!string.IsNullOrWhiteSpace(numeroNota))
                 filtro = x => x.Numero == numeroNota;
 

@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Data", "Infrastructure\Infrastructure.Data.csproj", "{E86A9C27-B5E6-55AF-275E-D8B4506EBA77}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{ADB4EC2B-0C4E-41DA-A270-8D470CB24280}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotaFiscalApp.Tests", "NotaFiscalApp.Tests\NotaFiscalApp.Tests.csproj", "{C521A0A0-D622-4169-BDC1-B0B11A75D157}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +45,10 @@ Global
 		{E86A9C27-B5E6-55AF-275E-D8B4506EBA77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E86A9C27-B5E6-55AF-275E-D8B4506EBA77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E86A9C27-B5E6-55AF-275E-D8B4506EBA77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C521A0A0-D622-4169-BDC1-B0B11A75D157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C521A0A0-D622-4169-BDC1-B0B11A75D157}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C521A0A0-D622-4169-BDC1-B0B11A75D157}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C521A0A0-D622-4169-BDC1-B0B11A75D157}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +58,7 @@ Global
 		{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1} = {4AC23E94-8FB6-4866-983C-7951FF1AB561}
 		{E528BBC3-1C26-8C35-F682-23718816ADCD} = {A27B270C-52EC-4ACC-96CB-C81F87622387}
 		{E86A9C27-B5E6-55AF-275E-D8B4506EBA77} = {BF281E15-7A5B-4787-953E-D8A1CE39A823}
+		{C521A0A0-D622-4169-BDC1-B0B11A75D157} = {ADB4EC2B-0C4E-41DA-A270-8D470CB24280}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D643CFE5-DA87-419F-9155-472D2438C68A}

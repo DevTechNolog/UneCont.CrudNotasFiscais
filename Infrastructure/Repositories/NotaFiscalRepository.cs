@@ -13,7 +13,7 @@ namespace NotaFiscalApp.Infrastructure.Data.Repositories
             return Task.CompletedTask;
         }
 
-        public Task<List<NotaFiscal>> GetAllAsync(Func<NotaFiscal, bool>? filtro = null)
+        public Task<List<NotaFiscal>> GetAllAsync(Func<NotaFiscal, bool> filtro)
         {
             return Task.FromResult(_notas.Where(filtro).AsEnumerable().ToList());
         }

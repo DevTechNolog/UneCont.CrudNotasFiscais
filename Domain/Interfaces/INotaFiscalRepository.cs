@@ -6,6 +6,6 @@ namespace NotaFiscalApp.Domain.Interfaces
     public interface INotaFiscalRepository
     {
         Task AddAsync(NotaFiscal nota);
-        Task<List<NotaFiscal>> GetAllAsync(Func<NotaFiscal, bool>? filtro = null);
+        Task<List<NotaFiscal>> GetAllAsync(Func<NotaFiscal, bool> filtro);
     }
 }
